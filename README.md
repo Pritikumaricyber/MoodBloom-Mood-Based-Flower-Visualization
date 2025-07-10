@@ -44,6 +44,25 @@ moodbloom/
 - MySQL Connector/J (`mysql-connector-j-<version>.jar`)
 
 ---
+## 🚀 How to Run
+1. ✅ Compile the Project
+   
+Make sure you're inside the root moodbloom folder in terminal or PowerShell.
+
+```bash
+Copy
+Edit
+javac -cp "lib/*;lib/javafx-sdk-24.0.1/lib/*" -d out src/main/Main.java src/controllers/MoodController.java src/database/DBConnection.java
+This compiles the Java source files and places the class files in the out directory.
+```
+
+2. ✅ Run the Application
+```bash
+Copy
+Edit
+java -cp "out;lib/*;lib/javafx-sdk-24.0.1/lib/*" --module-path lib/javafx-sdk-24.0.1/lib --add-modules javafx.controls main.Main
+Make sure the JavaFX SDK path matches your folder name, and you're using Java 17 or above (Java 23 recommended).
+```
 
 ## 🧩 Database Setup
 
@@ -58,8 +77,48 @@ CREATE TABLE mood_history (
     flower_type VARCHAR(100),
     date_time DATETIME
 );
+```
+---
+## 🚀 How to Run
 
+1. ✅ Compile the Project
 
+Open terminal in your project folder:
 
+```bash
+javac -cp "lib/*;lib/javafx-sdk-24.0.1/lib/*" -d out src/main/Main.java src/controllers/MoodController.java src/database/DBConnection.java
+```
+2. ✅ Run the Application
 
+```bash
+java -cp "out;lib/*;lib/javafx-sdk-24.0.1/lib/*" --module-path lib/javafx-sdk-24.0.1/lib --add-modules javafx.controls main.Main
+```
 
+---
+
+## 🧠 How It Works
+
+The user selects a mood from a dropdown.
+
+MoodController generates a flower drawing using JavaFX shapes.
+
+The selected mood and flower type are saved into the MySQL database.
+
+---
+## 🙋‍♀️ Author
+Priti Kumari
+
+Passionate about visual storytelling through code 🌼
+
+---
+## 📜 License
+This project is for academic and educational purposes.
+You may use and modify with attribution.
+
+```Let me know if you want this:
+- in **plain `.txt`** or **Markdown file** format
+- with **images inserted**
+- or auto-generated as a downloadable folder
+
+Happy to help! 🌷
+```
